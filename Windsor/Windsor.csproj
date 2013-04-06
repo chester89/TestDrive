@@ -55,6 +55,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Calculation.cs" />
+    <Compile Include="Models\Connection.cs" />
+    <Compile Include="Models\Connector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ExplicitScanning\Scope.cs" />
     <Compile Include="ExplicitScanning\SimpleRetrieving.cs" />

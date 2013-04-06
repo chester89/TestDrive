@@ -1,6 +1,7 @@
 ﻿using Castle.MicroKernel.Registration;
 using Castle.Windsor;
 using Machine.Specifications;
+using Windsor.Models;
 using Xunit;
 
 namespace Windsor.ExplicitScanning
