@@ -8,11 +8,11 @@ using Xunit;
 
 namespace Windsor.ExplicitScanning
 {
-    public class SimpleRetrieving
+    public class SimpleScenarios
     {
         private IWindsorContainer container;
 
-        public SimpleRetrieving()
+        public SimpleScenarios()
         {
             container = new WindsorContainer();
         }
