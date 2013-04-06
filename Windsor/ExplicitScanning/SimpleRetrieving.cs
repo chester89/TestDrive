@@ -3,6 +3,7 @@ using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.Resolvers.SpecializedResolvers;
 using Castle.Windsor;
 using Machine.Specifications;
+using Windsor.Models;
 using Xunit;
 
 namespace Windsor.ExplicitScanning
@@ -35,7 +36,10 @@ namespace Windsor.ExplicitScanning
         public void ShouldRegisterWithExplicitParameters()
         {
             container.Register(Component.For<INetworkConnection>()
-                .ImplementedBy<NetworkConnection>().DependsOn(new Dependency[] { Dependency.OnValue<int>(5)}));
+                                   .ImplementedBy<NetworkConnection>().DependsOn(new Dependency[]
+                                                                                     {
+                                                                                         Dependency.OnValue<int>(5)
+                                                                                     }));
             container.Resolve<INetworkConnection>().ShouldBeOfType<INetworkConnection>();
         }
 
@@ -43,102 +47,10 @@ namespace Windsor.ExplicitScanning
         public void ShouldResolveCollectionParameter()
         {
             container.Kernel.Resolver.AddSubResolver(new CollectionResolver(container.Kernel));
-            container.Register( Component.For<IConnectorReader>().ImplementedBy<ConnectorReader>(),
-                                Component.For<IConnector>().ImplementedBy<NetworkConnector>(),
-                                Component.For<IConnector>().ImplementedBy<LocalConnector>());
+            container.Register(Component.For<IConnectorReader>().ImplementedBy<ConnectorReader>(),
+                               Component.For<IConnector>().ImplementedBy<NetworkConnector>(),
+                               Component.For<IConnector>().ImplementedBy<LocalConnector>());
             container.Resolve<IConnectorReader>().ShouldBeOfType<IConnectorReader>();
-        }
-    }
-
-    public interface IConnectorReader
-    {
-        void TryVeryHard();
-    }
-
-    public interface IConnector
-    {
-        void Connect(string settings);
-    }
-
-    public class NetworkConnector: IConnector
-    {
-        public void Connect(string settings)
-        {
-            
-        }
-    }
-
-    public class LocalConnector: IConnector
-    {
-        public void Connect(string settings)
-        {}
-    }
-
-    public class ConnectorReader: IConnectorReader
-    {
-        private readonly IEnumerable<IConnector> _connectors;
-
-        public ConnectorReader(IEnumerable<IConnector> connectors)
-        {
-            _connectors = connectors;
-        }
-
-        public void TryVeryHard()
-        {
-            
-        }
-    }
-
-    public interface ICalculation
-    {
-        int Sum(int x, int y);
-    }
-
-    public class StraightForwardCalculation: ICalculation
-    {
-        public int Sum(int x, int y)
-        {
-            return x + y;
-        }
-    }
-
-    public interface IFinancialStrategy
-    {
-        void Speak();
-    }
-
-    public class FinancialStrategy: IFinancialStrategy
-    {
-        private readonly ICalculation calculation;
-
-        public FinancialStrategy(ICalculation calculation)
-        {
-            this.calculation = calculation;
-        }
-
-        public void Speak()
-        {
-            calculation.Sum(10, 5);
-        }
-    }
-
-    public interface INetworkConnection
-    {
-        void Connect(string address);
-    }
-
-    public class NetworkConnection: INetworkConnection
-    {
-        private readonly int _defaultMode;
-
-        public NetworkConnection(int defaultMode)
-        {
-            _defaultMode = defaultMode;
-        }
-
-        public void Connect(string address)
-        {
-            
         }
     }
 }
