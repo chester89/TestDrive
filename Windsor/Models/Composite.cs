@@ -9,7 +9,7 @@ namespace Windsor.Models
     {
         int One { get; }
         ICalculation Calculation { get; }
-        IEnumerable<IConnector> Connectors { get; }
+        //IEnumerable<IConnector> Connectors { get; }
         void DoStuff();
     }
 
@@ -17,7 +17,7 @@ namespace Windsor.Models
     {
         public int One { get; set; }
         public ICalculation Calculation { get; set; }
-        public IEnumerable<IConnector> Connectors { get; set; }
+        public List<IConnector> Connectors { get; set; }
 
         public void DoStuff()
         {

@@ -52,5 +52,23 @@ namespace Windsor.ExplicitScanning
                                Component.For<IConnector>().ImplementedBy<LocalConnector>());
             container.Resolve<IConnectorReader>().ShouldBeOfType<IConnectorReader>();
         }
+
+        [Fact]
+        public void ShouldResolveNamedDependency()
+        {
+            container.Register(Component.For<IConnector>().ImplementedBy<LocalConnector>().Named("local"),
+                               Component.For<IConnector>().ImplementedBy<NetworkConnector>().Named("network"));
+
+            container.Resolve<IConnector>("local").ShouldBeOfType<LocalConnector>();
+            container.Resolve<IConnector>("network").ShouldBeOfType<NetworkConnector>();
+        }
+
+        [Fact]
+        public void ShouldResolveATypeNotWiredThroughContainer()
+        {
+            container.Register(AllTypes.FromThisAssembly().Pick().WithService.DefaultInterfaces()
+                .Configure(c => c.LifestyleTransient()));
+            container.Resolve<SimpleConstruct>().ShouldNotBeNull();
+        }
     }
 }
