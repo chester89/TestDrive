@@ -66,7 +66,7 @@ namespace Windsor.ExplicitScanning
         [Fact]
         public void ShouldResolveATypeNotWiredThroughContainer()
         {
-            container.Register(AllTypes.FromThisAssembly().Pick().WithService.DefaultInterfaces()
+            container.Register(Types.FromThisAssembly().Pick()//.WithService.DefaultInterfaces()
                 .Configure(c => c.LifestyleTransient()));
             container.Resolve<SimpleConstruct>().ShouldNotBeNull();
         }
