@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Windsor", "Windsor\Windsor.csproj", "{C9762C88-1DD4-4B10-95D4-0ACDF1819CFD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autofac", "Autofac\Autofac.csproj", "{6AE5054B-1526-4B70-8DA9-501846DE7762}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{EF736443-04EB-4256-86A0-318CE889A8A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{C9762C88-1DD4-4B10-95D4-0ACDF1819CFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9762C88-1DD4-4B10-95D4-0ACDF1819CFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9762C88-1DD4-4B10-95D4-0ACDF1819CFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AE5054B-1526-4B70-8DA9-501846DE7762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AE5054B-1526-4B70-8DA9-501846DE7762}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AE5054B-1526-4B70-8DA9-501846DE7762}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AE5054B-1526-4B70-8DA9-501846DE7762}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF736443-04EB-4256-86A0-318CE889A8A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF736443-04EB-4256-86A0-318CE889A8A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF736443-04EB-4256-86A0-318CE889A8A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF736443-04EB-4256-86A0-318CE889A8A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
