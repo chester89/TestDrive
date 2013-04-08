@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autofac", "Autofac\Autofac.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{EF736443-04EB-4256-86A0-318CE889A8A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructureMap", "StructureMap\StructureMap.csproj", "{E3AEF570-3039-44F4-AADA-6F2EF6446CD1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{EF736443-04EB-4256-86A0-318CE889A8A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF736443-04EB-4256-86A0-318CE889A8A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF736443-04EB-4256-86A0-318CE889A8A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3AEF570-3039-44F4-AADA-6F2EF6446CD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3AEF570-3039-44F4-AADA-6F2EF6446CD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3AEF570-3039-44F4-AADA-6F2EF6446CD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3AEF570-3039-44F4-AADA-6F2EF6446CD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

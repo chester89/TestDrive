@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{6AE5054B-1526-4B70-8DA9-501846DE7762}</ProjectGuid>
+    <ProjectGuid>{E3AEF570-3039-44F4-AADA-6F2EF6446CD1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Autofac</RootNamespace>
-    <AssemblyName>Autofac</AssemblyName>
+    <RootNamespace>StructureMap</RootNamespace>
+    <AssemblyName>StructureMap</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,11 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac">
-      <HintPath>..\packages\Autofac.3.0.2\lib\net40\Autofac.dll</HintPath>
-    </Reference>
-    <Reference Include="Autofac.Configuration">
-      <HintPath>..\packages\Autofac.3.0.2\lib\net40\Autofac.Configuration.dll</HintPath>
+    <Reference Include="StructureMap">
+      <HintPath>..\packages\structuremap.2.6.4.1\lib\net40\StructureMap.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,13 +46,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{EF736443-04EB-4256-86A0-318CE889A8A6}</Project>
       <Name>Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
