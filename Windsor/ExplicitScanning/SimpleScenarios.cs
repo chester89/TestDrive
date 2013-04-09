@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.Resolvers.SpecializedResolvers;
 using Castle.Windsor;
@@ -66,7 +67,11 @@ namespace Windsor.ExplicitScanning
         [Fact]
         public void ShouldResolveATypeNotWiredThroughContainer()
         {
-            container.Register(Types.FromThisAssembly().Pick()//.WithService.DefaultInterfaces()
+            container.Register(Types
+                //.FromThisAssembly()
+                .FromAssemblyInDirectory(new AssemblyFilter(Environment.CurrentDirectory))
+                .Pick()//.WithService.DefaultInterfaces()
+                .If(t => t.IsClass || t.IsInterface)
                 .Configure(c => c.LifestyleTransient()));
             container.Resolve<SimpleConstruct>().ShouldNotBeNull();
         }

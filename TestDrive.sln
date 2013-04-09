@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Windsor", "Windsor\Windsor.csproj", "{C9762C88-1DD4-4B10-95D4-0ACDF1819CFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autofac", "Autofac\Autofac.csproj", "{6AE5054B-1526-4B70-8DA9-501846DE7762}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drive.Autofac", "Autofac\Drive.Autofac.csproj", "{6AE5054B-1526-4B70-8DA9-501846DE7762}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{EF736443-04EB-4256-86A0-318CE889A8A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructureMap", "StructureMap\StructureMap.csproj", "{E3AEF570-3039-44F4-AADA-6F2EF6446CD1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drive.StructureMap", "StructureMap\Drive.StructureMap.csproj", "{E3AEF570-3039-44F4-AADA-6F2EF6446CD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
